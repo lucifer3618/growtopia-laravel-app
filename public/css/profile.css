@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("../images/profile/profile-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.tab-container {
+    margin: 120px 200px 50px 200px;
+    z-index: 9999;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.links {
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
+
+.nav button {
+    width: 200px;
+}
+
+.user-img {
+    margin: 30px 0 20px 0;
+}
+
+.user-img img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+#file {
+    display: none;
+}
+
+#uploadBtn {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    padding-top: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(0, 184, 165);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: translate(-40px, 90px);
+}
+
+.nav-link.links.active {
+    background-color: rgb(0, 153, 112);
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        display: none;
+    }
+
+    .tab-container {
+        margin: 0;
+        margin: 50px 30px 20px 30px !important;
+        padding: -20px 0 0 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .form {
+        margin: 20px;
+    }
+
+}
+
+/* Delete tab */
+.delete-container {
+    margin: 0 50px;
+    text-align: justify;
+}
+
+.heading h1 {
+    color: red;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.delete-form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 200px 1fr;
+}
+
+.delete-btn {
+    width: 170px;
+    height: 40px;
+    margin-top: 32px;
+}
+
+#delete-input {
+    margin-top: 10px !important;
+    border: 1px solid;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+/* Change password tab*/
+.change-password-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+}
+
+.password-img img {
+    width: 425px;
+}
+
+.password-change-form {
+    margin-top: 30px;
+}
+
+.password-change-form input {
+    width: 300px;
+}
+
+.password-change-title {
+    font-weight: 600;
+}
+
+.change-btn {
+    margin-top: 10px;
+}

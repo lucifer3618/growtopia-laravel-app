@@ -1,0 +1,381 @@
+*,
+*::after,
+*::before {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Form Start */
+body,
+input {
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: url("../images/login-register/login-background.jpg"), rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1020px;
+    height: 640px;
+    margin-top: 70px;
+    position: relative;
+    background: rgb(255, 255, 255);
+    border-radius: 3.3rem;
+    box-shadow: 0px 60px 40px -30px rgba(0, 0, 0, 0.27);
+}
+
+.inner-container {
+    position: absolute;
+    width: calc(100% - 4.1rem);
+    height: calc(100% - 4.1rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.forms {
+    position: absolute;
+    height: 100%;
+    width: 45%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    transition: 0.8s ease-in-out;
+}
+
+.carousel {
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    top: 0;
+    left: 45%;
+    background: #a1f39b;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding-bottom: 2rem;
+    overflow: hidden;
+    transition: 0.8s ease-in-out;
+}
+
+form {
+    max-width: 260px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-area: 1 / 1 / 2 / 2;
+    transition: opacity 20ms 0.4s;
+}
+
+form.sign-up {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 0.3rem;
+}
+
+.logo h4 {
+    font-size: 1.1rem;
+    margin-top: 5px;
+    letter-spacing: -0.5px;
+    color: #151111;
+}
+
+.heading h2 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #151111;
+}
+
+.heading h6 {
+    color: #bababa;
+    font-weight: 400;
+    font-size: 0.75rem;
+    display: inline;
+}
+
+.toggle {
+    color: #151111;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.toggle:hover {
+    color: rgb(12, 183, 46);
+}
+
+.inputs {
+    position: relative;
+    height: 37px;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.input-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #bbb;
+    padding: 0px;
+    font-size: 0.95rem;
+    color: #151111;
+    transition: 0.4s;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.95rem;
+    color: #bbb;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.input-box.active {
+    border-bottom-color: #151111;
+}
+
+.input-box.active+label {
+    font-size: 0.75rem;
+    top: -2px;
+}
+
+.signin-btn {
+    display: inline-block;
+    width: 100%;
+    height: 43px;
+    background: #151111;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    transition: 0.4s;
+    margin-top: 2rem;
+}
+
+.signin-btn:hover {
+    background: rgb(12, 183, 46);
+}
+
+.text {
+    color: #bbb;
+    font-size: 0.7rem;
+}
+
+.text a {
+    color: #bbb;
+    transition: 0.3s;
+}
+
+.text a:hover {
+    color: rgb(12, 183, 46);
+}
+
+main.sign-up-mode form.sign-in {
+    opacity: 0;
+    pointer-events: none;
+}
+
+main.sign-up-mode form.sign-up {
+    opacity: 1;
+    pointer-events: all;
+}
+
+main.sign-up-mode .forms {
+    left: 55%;
+}
+
+main.sign-up-mode .carousel {
+    left: 0%;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.image {
+    width: 100%;
+    grid-area: 1 / 1 / 2 / 2;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.5s;
+}
+
+.img1 {
+    transform: translate(0px, -50px);
+}
+
+.img2 {
+    transform: scale(0.4, 0.5);
+}
+
+.img3 {
+    transform: scale(0.3) rotate(-20deg);
+}
+
+.image.show {
+    opacity: 1;
+    transform: none;
+}
+
+.text-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bullets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.bullets span {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #aaa;
+    margin: 0 0.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bullets span.active {
+    width: 1.1rem;
+    background: #151111;
+    border-radius: 1rem;
+}
+
+.sub-text {
+    max-height: 2.2rem;
+    overflow: hidden;
+}
+
+.text-group h2 {
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+
+.error {
+    margin-top: -10px;
+    margin-bottom: 0.4rem;
+    font-size: 12px;
+    color: red;
+}
+
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transform: translateY(0);
+    transition: 0.5s;
+    width: calc(100% - 0.6rem);
+}
+
+@media (max-width: 850px) {
+    .container {
+        height: auto;
+        max-width: 550px;
+        overflow: hidden;
+    }
+
+    .inner-container {
+        position: static;
+        transform: none;
+        width: revert;
+        height: revert;
+        width: calc(100% - 0.1rem);
+        height: calc(100% - 0.1rem);
+        padding: 0.6rem;
+    }
+
+    form {
+        max-width: revert;
+        padding: 1.5rem 0.5rem 0.5rem;
+        transition: transform 0.8s ease-in-out, opacity 0.45s linear;
+    }
+
+    form.sign-up {
+        transform: translateX(100%);
+    }
+
+    main.sign-up-mode form.sign-in {
+        transform: translateX(-100%);
+    }
+
+    main.sign-up-mode form.sign-up {
+        transform: translateX(0%);
+    }
+
+    .text-group h2 {
+        font-size: 0.8rem;
+    }
+
+    .heading {
+        margin-top: 2rem;
+    }
+
+    .forms {
+        position: revert;
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel {
+        position: revert;
+        height: auto;
+        width: 100%;
+        display: flex;
+        padding-top: 25px;
+        margin-top: 3%;
+    }
+
+    .images {
+        display: none;
+    }
+
+    .text-slider {
+        width: 100%;
+    }
+}
+
+/* Form End*/
